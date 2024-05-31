@@ -17,13 +17,13 @@ local Paginator = require(path.to.Paginator)
 local PaginatedData = Paginator.new(Data, 3)
 
 -- Print the first page --
-for _, obj in pairs(PaginatedData)do
+for _, obj in pairs(PaginatedData:getItemsForCurrentPage())do
   print(obj)
 end
 
 PaginatedData.nextPage()
 -- Print the second page --
-for _, obj in pairs(PaginatedData)do
+for _, obj in pairs(PaginatedData:getItemsForCurrentPage())do
   print(obj)
 end
 ```
